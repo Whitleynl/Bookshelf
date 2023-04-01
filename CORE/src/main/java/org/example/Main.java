@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.books.Book;
+
 import java.io.IOException;
 import java.util.Set;
 

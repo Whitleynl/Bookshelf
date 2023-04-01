@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.books.Book;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
