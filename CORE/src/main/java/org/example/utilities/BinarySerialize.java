@@ -33,7 +33,6 @@ public class BinarySerialize implements Serializable {
         Set<Book> allBooks = Book.deserializeCSV("randomBooks.csv");
         BinarySerialize.serializeAsBinary("randomBooksOutput.ser", allBooks);
         Object obj = BinarySerialize.deserializeBinary("randomBooksOutput.ser");
-        Set<Book> books = (Set<Book>) obj;
+        System.out.println(obj);
     }
-
 }

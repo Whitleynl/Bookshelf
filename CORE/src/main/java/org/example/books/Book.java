@@ -1,9 +1,6 @@
 package org.example.books;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,6 +9,20 @@ import java.util.*;
 
 
 public class Book implements Comparable<Book>, Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 7833299397228018065L;
+//    private void readObject ( ObjectInputStream stream ) throws IOException,
+//            ClassNotFoundException {
+//        stream.defaultReadObject();
+//
+//        ObjectStreamClass myObject = ObjectStreamClass.lookup(
+//                Class.forName( Book.class.getCanonicalName()) );
+//        long theSUID = myObject.getSerialVersionUID();
+//
+//        System.err.println( "Customized De-serialization of Book "
+//                + theSUID );
+//    }
 
     private String title;
     private String author;
