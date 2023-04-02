@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="contents of main now in test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,17 +85,17 @@
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CORE/src" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
       <recent name="$PROJECT_DIR$/CORE/src/main" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example" />
-      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookTest.serializeAndDeserialize">
+  <component name="RunManager" selected="Application.BinarySerialize">
     <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
       <module name="Bookshelf.CORE.main" />
@@ -194,7 +195,7 @@
       <workItem from="1679770290412" duration="1300000" />
       <workItem from="1679938035754" duration="1393000" />
       <workItem from="1680363202248" duration="1330000" />
-      <workItem from="1680474680043" duration="2186000" />
+      <workItem from="1680474680043" duration="2564000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -224,7 +225,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680476353406</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="contents of main now in test">
+      <created>1680476948071</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680476948071</updated>
+    </task>
+    <task id="LOCAL-00006" summary="contents of main now in test">
+      <created>1680477067182</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680477067182</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
