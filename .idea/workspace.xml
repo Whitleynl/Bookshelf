@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="moved everything from bookProject. &#10;Fixes needed.">
-      <change afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java/BookTest.java" afterDir="false" />
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="contents of main now in test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/books/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/books/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/test/java/BookTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +65,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "liberica-17 (2)",
     "last_directory_selection": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java/org/example",
-    "last_opened_file_path": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java/org/example",
+    "last_opened_file_path": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,20 +79,22 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CORE/src" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example" />
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
+      <recent name="$PROJECT_DIR$/CORE/src/main" />
+      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities" />
-      <recent name="$PROJECT_DIR$/CORE/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinarySerialize">
+  <component name="RunManager" selected="JUnit.BookTest.serializeAndDeserialize">
     <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
       <module name="Bookshelf.CORE.main" />
@@ -161,8 +157,25 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="BookTest.serializeAndDeserialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bookshelf.CORE.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test.java" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.java.BookTest" />
+      <option name="METHOD_NAME" value="serializeAndDeserialize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookTest.serializeAndDeserialize" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.BinarySerialize" />
@@ -181,7 +194,7 @@
       <workItem from="1679770290412" duration="1300000" />
       <workItem from="1679938035754" duration="1393000" />
       <workItem from="1680363202248" duration="1330000" />
-      <workItem from="1680474680043" duration="1529000" />
+      <workItem from="1680474680043" duration="2186000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -204,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680364530345</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="contents of main now in test">
+      <created>1680476353406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680476353406</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,104 +234,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="moved everything from bookProject. &#10;Fixes needed." />
-    <option name="LAST_COMMIT_MESSAGE" value="moved everything from bookProject. &#10;Fixes needed." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>24</line>
-          <properties class="org.example.utilities.BinarySerialize" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>16</line>
-          <properties class="org.example.utilities.BinarySerialize" method="deserializeBinary">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>9</line>
-          <properties class="org.example.utilities.BinarySerialize" method="serializeAsBinary">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="contents of main now in test" />
+    <option name="LAST_COMMIT_MESSAGE" value="contents of main now in test" />
   </component>
 </project>

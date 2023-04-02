@@ -42,7 +42,7 @@ private/
 *.txt
 *.html
 *.xml
-*.csv
+#*.csv
 test_*
 *.ser
 *.zip
