@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="binarySerialize works - FIX TEST">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="binarySerialize and binaryDeserialize tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -66,6 +67,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "liberica-17 (2)",
     "last_directory_selection": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java/org/example",
@@ -95,17 +99,23 @@
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.utilities" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinarySerializeTest.serAndDeserBinary">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+  <component name="RunManager" selected="Application.BinarySerialize">
+    <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
       <module name="Bookshelf.CORE.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BinarySerializeTest.serAndDeserBinary" />
+        <item itemvalue="Application.BinarySerialize" />
         <item itemvalue="JUnit.BookTest.serializeAndDeserialize" />
+        <item itemvalue="JUnit.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="JUnit.BookTest" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +217,7 @@
       <workItem from="1680363202248" duration="1330000" />
       <workItem from="1680474680043" duration="2928000" />
       <workItem from="1680982827852" duration="104000" />
-      <workItem from="1680982999519" duration="2793000" />
+      <workItem from="1680982999519" duration="3430000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -258,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680477604255</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="binarySerialize and binaryDeserialize tests">
+      <created>1681049361980</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681049361980</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +287,7 @@
     <MESSAGE value="moved everything from bookProject. &#10;Fixes needed." />
     <MESSAGE value="contents of main now in test" />
     <MESSAGE value="binarySerialize works - FIX TEST" />
-    <option name="LAST_COMMIT_MESSAGE" value="binarySerialize works - FIX TEST" />
+    <MESSAGE value="binarySerialize and binaryDeserialize tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="binarySerialize and binaryDeserialize tests" />
   </component>
 </project>
