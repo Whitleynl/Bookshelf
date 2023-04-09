@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="binarySerialize and binaryDeserialize tests">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="binarySerialize works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/com/example/app/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/com/example/app/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/resources/com/example/app/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/resources/com/example/app/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,9 +81,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -93,11 +96,11 @@
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CORE" />
       <recent name="$PROJECT_DIR$/CORE/src" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
       <recent name="$PROJECT_DIR$/CORE/src/main" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test" />
-      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -109,7 +112,7 @@
       <recent name="org.example.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinarySerialize">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
       <module name="Bookshelf.CORE.main" />
@@ -123,29 +126,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookTest.serializeAndDeserialize" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":CORE:test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.BookTest.serializeAndDeserialize&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.app.HelloApplication" />
+      <module name="Bookshelf.APP.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="BinarySerializeTest.serAndDeserBinary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bookshelf.CORE.main" />
@@ -196,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.BinarySerialize" />
         <item itemvalue="JUnit.BookTest.serializeAndDeserialize" />
         <item itemvalue="JUnit.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="JUnit.BookTest" />
-        <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +209,7 @@
       <workItem from="1680363202248" duration="1330000" />
       <workItem from="1680474680043" duration="2928000" />
       <workItem from="1680982827852" duration="104000" />
-      <workItem from="1680982999519" duration="3430000" />
+      <workItem from="1680982999519" duration="5394000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -275,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681049361980</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="binarySerialize works">
+      <created>1681049837188</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681049837188</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +287,11 @@
     <MESSAGE value="contents of main now in test" />
     <MESSAGE value="binarySerialize works - FIX TEST" />
     <MESSAGE value="binarySerialize and binaryDeserialize tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="binarySerialize and binaryDeserialize tests" />
+    <MESSAGE value="binarySerialize works" />
+    <option name="LAST_COMMIT_MESSAGE" value="binarySerialize works" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
