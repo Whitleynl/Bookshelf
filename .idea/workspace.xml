@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="dependencies updated">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="builds successfully-tests don't run">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradlex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java/BookTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerializeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,17 +38,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Bookshelf" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bookshelf" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bookshelf" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -86,7 +73,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "testing",
     "jdk.selected.JAVA_MODULE": "liberica-17 (2)",
     "last_directory_selection": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java/org/example",
     "last_opened_file_path": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java",
@@ -95,10 +82,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -128,21 +115,14 @@
       <recent name="org.example.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Bookshelf [build]">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.app.HelloApplication" />
-      <module name="Bookshelf.APP.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinarySerializeTest.serAndDeserBinary" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle APP:clean" />
+      <command value="gradle APP:build" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.BookTest.serializeAndDeserialize">
+    <configuration name="BookTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -155,7 +135,7 @@
           <list>
             <option value=":CORE:test" />
             <option value="--tests" />
-            <option value="&quot;org.example.utilities.BinarySerializeTest.serAndDeserBinary&quot;" />
+            <option value="&quot;org.example.books.BookTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,6 +170,50 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="Bookshelf [APP:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="APP:build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="Bookshelf [APP:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="APP:clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="Bookshelf [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -212,35 +236,13 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Bookshelf [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Bookshelf [build]" />
-        <item itemvalue="Gradle.Bookshelf [clean]" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
-        <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Gradle.BookTest" />
+        <item itemvalue="Gradle.Bookshelf [APP:build]" />
+        <item itemvalue="Gradle.Bookshelf [APP:clean]" />
+        <item itemvalue="Gradle.Bookshelf [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -260,6 +262,7 @@
       <workItem from="1680982999519" duration="7175000" />
       <workItem from="1681071787450" duration="3135000" />
       <workItem from="1681140930294" duration="20000" />
+      <workItem from="1681501418624" duration="3101000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>

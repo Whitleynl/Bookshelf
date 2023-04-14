@@ -8,6 +8,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io") // this fixed the cirdles:commons dependency issue
 }
 
 dependencies {
