@@ -25,7 +25,7 @@ class BookTest {
     @Test
     public void serializeAndDeserialize() throws IOException {
         ResourceExtractor tripoliExtractor = new ResourceExtractor(Book.class);
-        File filename = tripoliExtractor.extractResourceAsFile("/org/example/books/randomBooks.csv"); //this still isn't finding the file
+        File filename = tripoliExtractor.extractResourceAsFile("randomBooks.csv"); //this still isn't finding the file
         Set<Book> allBooks = Book.deserializeCSV(filename.getAbsolutePath());
         Book.serializeAsCSV("randomBooksOutput.csv", allBooks);
         Book book1 = new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", "Allen & Unwin");
