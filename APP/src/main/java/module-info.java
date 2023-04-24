@@ -6,8 +6,9 @@ module com.example.app {
     requires org.kordamp.bootstrapfx.core;
     requires com.example.core;
 
-    opens com.example.app to javafx.fxml;
-    exports com.example.app;
+    opens org.example.app to javafx.fxml;
+    opens org.example to javafx.fxml;
+    exports org.example.app;
 }
 
 

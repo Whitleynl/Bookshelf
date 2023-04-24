@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="working on 'file not found'">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/com/example/app/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/org/example/app/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/com/example/app/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/org/example/app/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/resources/com/example/app/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/resources/org/example/app/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,42 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Bookshelf" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Bookshelf" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Bookshelf" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Bookshelf" type="f1a62948:ProjectNode" />
+                <item name="APP" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Bookshelf" type="f1a62948:ProjectNode" />
+                <item name="APP" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Bookshelf" type="f1a62948:ProjectNode" />
+                <item name="APP" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Bookshelf" type="f1a62948:ProjectNode" />
+                <item name="APP" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="testRuntimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -108,6 +144,10 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.app" />
+      <recent name="com.example" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example.books" />
       <recent name="org.example.utilities" />
@@ -122,7 +162,7 @@
       <command value="gradle APP:build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BookTest.serializeAndDeserialize">
+  <component name="RunManager" selected="Gradle.Bookshelf [build]">
     <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
       <module name="Bookshelf.CORE.main" />
@@ -206,18 +246,18 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Bookshelf [APP:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Bookshelf [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="APP:clean" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,11 +270,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Bookshelf [build]" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Gradle.BookTest" />
         <item itemvalue="Application.BinarySerialize" />
         <item itemvalue="Gradle.Bookshelf [APP:build]" />
-        <item itemvalue="Gradle.Bookshelf [APP:clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +297,7 @@
       <workItem from="1681501418624" duration="3472000" />
       <workItem from="1682093646031" duration="39000" />
       <workItem from="1682109839292" duration="1596000" />
-      <workItem from="1682356629788" duration="316000" />
+      <workItem from="1682356629788" duration="2275000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -357,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682110098922</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="working on 'file not found'">
+      <created>1682356999219</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682356999220</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
