@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="dependency issue fixed">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="working on 'file not found'">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/utilities/BinarySerialize.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,8 +231,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
-        <item itemvalue="Application.BinarySerialize" />
         <item itemvalue="Gradle.BookTest" />
+        <item itemvalue="Application.BinarySerialize" />
         <item itemvalue="Gradle.Bookshelf [APP:build]" />
         <item itemvalue="Gradle.Bookshelf [APP:clean]" />
       </list>
@@ -252,6 +256,8 @@
       <workItem from="1681140930294" duration="20000" />
       <workItem from="1681501418624" duration="3472000" />
       <workItem from="1682093646031" duration="39000" />
+      <workItem from="1682109839292" duration="1596000" />
+      <workItem from="1682356629788" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -344,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681504890565</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="working on 'file not found'">
+      <created>1682110098922</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682110098922</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +375,8 @@
     <MESSAGE value="app displays grid and welcome message" />
     <MESSAGE value="dependencies updated" />
     <MESSAGE value="dependency issue fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="dependency issue fixed" />
+    <MESSAGE value="working on 'file not found'" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on 'file not found'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

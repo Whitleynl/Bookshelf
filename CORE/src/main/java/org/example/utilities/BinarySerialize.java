@@ -25,6 +25,5 @@ public class BinarySerialize implements Serializable {
         BinarySerialize.serializeAsBinary("randomBooksOutput.ser", allBooks);
         Object obj = BinarySerialize.deserializeBinary("randomBooksOutput.ser");
         System.out.println(obj);
-
     }
 }

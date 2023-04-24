@@ -42,7 +42,7 @@ private/
 *.txt
 *.html
 *.xml
-*.csv
+#*.csv
 test_*
 *.ser
 *.zip
@@ -59,11 +59,6 @@ test_*
 
 
 # Developer docs
-!processDocs/meetingNotes/*
-!productDocs/dataFormatDocs/*
-!productDocs/requirements/*
-!productDocs/testDesign/*
-!productDocs/uxDesign/*
 
 # webpage via pages
 !docsOrig/*
