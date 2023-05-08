@@ -1,6 +1,5 @@
 package org.example.books;
 import org.cirdles.commons.util.ResourceExtractor;
-import org.example.books.Book;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,7 @@ class BookTest {
     @Test
     public void serializeAndDeserialize() throws IOException {
         ResourceExtractor resourceExtractor = new ResourceExtractor(Book.class);
-        File filename = resourceExtractor.extractResourceAsFile("randomBooks.csv"); //this still isn't finding the file
+        File filename = resourceExtractor.extractResourceAsFile("randomBooks.csv");
         Set<Book> allBooks = Book.deserializeCSV(filename.getAbsolutePath());
         Book.serializeAsCSV("randomBooksOutput.csv", allBooks);
         Book book1 = new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", "Allen & Unwin");
