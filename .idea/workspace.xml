@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="working on 'file not found'">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/main/java/com/example/app/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/org/example/app/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/main/java/com/example/app/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/org/example/app/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/main/resources/com/example/app/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/resources/org/example/app/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="working on 'file not found'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +156,7 @@
       <command value="gradle APP:build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Bookshelf [build]">
+  <component name="RunManager" selected="Gradle.BookTest.serializeAndDeserialize">
     <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
       <module name="Bookshelf.CORE.main" />
@@ -270,8 +264,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Bookshelf [build]" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
+        <item itemvalue="Gradle.Bookshelf [build]" />
         <item itemvalue="Gradle.BookTest" />
         <item itemvalue="Application.BinarySerialize" />
         <item itemvalue="Gradle.Bookshelf [APP:build]" />
@@ -297,7 +291,7 @@
       <workItem from="1681501418624" duration="3472000" />
       <workItem from="1682093646031" duration="39000" />
       <workItem from="1682109839292" duration="1596000" />
-      <workItem from="1682356629788" duration="2275000" />
+      <workItem from="1682356629788" duration="2329000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -404,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682356999220</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="working on 'file not found'">
+      <created>1682358925413</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682358925413</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
