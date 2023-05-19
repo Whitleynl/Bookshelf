@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="renamed resourceExtractor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/test/resources/org.example.books/randomBooks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/resources/randomBooks.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,30 +89,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;testing&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;liberica-17 (2)&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java/org/example&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "trying-stuff",
+    "jdk.selected.JAVA_MODULE": "liberica-17 (2)",
+    "last_directory_selection": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java/org/example",
+    "last_opened_file_path": "/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/CORE/src/main/java" />
@@ -122,11 +122,11 @@
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CORE/src/test/resources/" />
       <recent name="$PROJECT_DIR$/CORE/src/test/resources/org.example.books" />
       <recent name="$PROJECT_DIR$/CORE" />
       <recent name="$PROJECT_DIR$/CORE/src/main/resources/org.example" />
       <recent name="$PROJECT_DIR$/CORE/src" />
-      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -149,7 +149,7 @@
       <command value="gradle APP:clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BookTest.serializeAndDeserialize">
+  <component name="RunManager" selected="Gradle.BookTest.readCSV">
     <configuration name="BinarySerializeTest.serAndDeserBinary" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -174,7 +174,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="BookTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BookTest.readCSV" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,7 +187,7 @@
           <list>
             <option value=":CORE:test" />
             <option value="--tests" />
-            <option value="&quot;org.example.books.BookTest&quot;" />
+            <option value="&quot;org.example.books.BookTest.readCSV&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -268,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BookTest.readCSV" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.Bookshelf [APP:clean]" />
         <item itemvalue="Gradle.Bookshelf [build]" />
-        <item itemvalue="Gradle.BookTest" />
       </list>
     </recent_temporary>
   </component>
@@ -451,6 +451,13 @@
     <MESSAGE value="working on 'file not found'" />
     <MESSAGE value="renamed resourceExtractor" />
     <option name="LAST_COMMIT_MESSAGE" value="renamed resourceExtractor" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.cirdles.commons.util.ResourceExtractor" memberName="clazz" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
