@@ -42,7 +42,6 @@ private/
 *.txt
 *.html
 *.xml
-#*.csv
 test_*
 *.ser
 *.zip

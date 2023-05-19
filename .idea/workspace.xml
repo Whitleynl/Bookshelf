@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="renamed resourceExtractor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,8 +122,8 @@
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CORE" />
       <recent name="$PROJECT_DIR$/CORE/src/test/resources/org.example.books" />
+      <recent name="$PROJECT_DIR$/CORE" />
       <recent name="$PROJECT_DIR$/CORE/src/main/resources/org.example" />
       <recent name="$PROJECT_DIR$/CORE/src" />
       <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
@@ -149,18 +150,29 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.BookTest.serializeAndDeserialize">
-    <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
-      <module name="Bookshelf.CORE.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="BinarySerializeTest.serAndDeserBinary" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":CORE:test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.utilities.BinarySerializeTest.serAndDeserBinary&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
     <configuration name="BookTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -257,10 +269,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
+        <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.Bookshelf [APP:clean]" />
         <item itemvalue="Gradle.Bookshelf [build]" />
         <item itemvalue="Gradle.BookTest" />
-        <item itemvalue="Application.BinarySerialize" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +297,12 @@
       <workItem from="1682109839292" duration="1596000" />
       <workItem from="1682356629788" duration="2329000" />
       <workItem from="1683562922231" duration="613000" />
-      <workItem from="1683563593845" duration="1077000" />
+      <workItem from="1683563593845" duration="2085000" />
+      <workItem from="1684363957419" duration="57000" />
+      <workItem from="1684364066832" duration="3117000" />
+      <workItem from="1684513992290" duration="142000" />
+      <workItem from="1684514266025" duration="247000" />
+      <workItem from="1684514625829" duration="481000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -406,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683563111698</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="renamed resourceExtractor">
+      <created>1683564737331</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683564737331</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
