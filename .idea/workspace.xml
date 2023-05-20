@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="renamed resourceExtractor">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/test/resources/org.example.books/randomBooks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/resources/randomBooks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/APP/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/build.gradlex" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradlex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +80,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -85,6 +91,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NWC8H8vSreYSLf7ftgtXVoyvgd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -109,7 +116,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -149,7 +156,20 @@
       <command value="gradle APP:clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BookTest.readCSV">
+  <component name="RunManager" selected="Application.HelloApplication">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.app.HelloApplication" />
+      <module name="Bookshelf.APP.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinarySerializeTest.serAndDeserBinary" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -244,35 +264,13 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Bookshelf [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Gradle.BookTest.readCSV" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.Bookshelf [APP:clean]" />
-        <item itemvalue="Gradle.Bookshelf [build]" />
       </list>
     </recent_temporary>
   </component>
