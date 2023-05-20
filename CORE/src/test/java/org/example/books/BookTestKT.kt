@@ -10,20 +10,16 @@ class BookTestKT {
     fun readCSV() {
         val inputStream = FileInputStream("../CORE/src/test/resources/randomBooks.csv")
         val bookList = readCSVFile(inputStream)
-        val others = bookList
-
     }
 
-    @Test
-    fun readCSVFile(inputStream: InputStream): List<Book> {
+    private fun readCSVFile(inputStream: InputStream): List<Book> {
         val reader = inputStream.bufferedReader()
-        val header = reader.readLine()
+//        val header = reader.readLine() //Can be used to skip first line
         return reader.lineSequence().filter { it.isNotBlank() }.map {
             val (title, author, publisher) = it.split(',', ignoreCase = false, limit = 3)
             Book(title.trim(), author.trim(), publisher.trim())
         }.toList()
     }
-
 
     data class Book(
             val title: String,
