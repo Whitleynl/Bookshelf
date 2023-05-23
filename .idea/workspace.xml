@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="renamed resourceExtractor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/test/resources/org.example.books/randomBooks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/resources/org.example/books/randomBooks.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +78,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="trying-stuff" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -122,11 +126,11 @@
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CORE/src/test/resources/org.example/books" />
       <recent name="$PROJECT_DIR$/CORE/src/test/resources/org.example.books" />
       <recent name="$PROJECT_DIR$/CORE" />
       <recent name="$PROJECT_DIR$/CORE/src/main/resources/org.example" />
       <recent name="$PROJECT_DIR$/CORE/src" />
-      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -174,7 +178,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="BookTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BookTest.readCSV" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,7 +191,7 @@
           <list>
             <option value=":CORE:test" />
             <option value="--tests" />
-            <option value="&quot;org.example.books.BookTest&quot;" />
+            <option value="&quot;org.example.books.BookTest.readCSV&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -269,10 +273,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
+        <item itemvalue="Gradle.BookTest.readCSV" />
         <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.Bookshelf [APP:clean]" />
         <item itemvalue="Gradle.Bookshelf [build]" />
-        <item itemvalue="Gradle.BookTest" />
       </list>
     </recent_temporary>
   </component>
@@ -451,6 +455,13 @@
     <MESSAGE value="working on 'file not found'" />
     <MESSAGE value="renamed resourceExtractor" />
     <option name="LAST_COMMIT_MESSAGE" value="renamed resourceExtractor" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.cirdles.commons.util.ResourceExtractor" memberName="clazz" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
