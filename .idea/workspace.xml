@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="renamed resourceExtractor">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="corrected some file structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/test/resources/org.example.books/randomBooks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/resources/org.example/books/randomBooks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/utilities/BinarySerializeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/utilities/BinarySerializeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/test.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +156,20 @@
       <command value="gradle APP:clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BookTest.serializeAndDeserialize">
+  <component name="RunManager" selected="Application.HelloApplication">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.app.HelloApplication" />
+      <module name="Bookshelf.APP.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinarySerializeTest.serAndDeserBinary" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -248,35 +264,13 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Bookshelf [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Gradle.BookTest.readCSV" />
-        <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.Bookshelf [APP:clean]" />
-        <item itemvalue="Gradle.Bookshelf [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -307,6 +301,8 @@
       <workItem from="1684513992290" duration="142000" />
       <workItem from="1684514266025" duration="247000" />
       <workItem from="1684514625829" duration="481000" />
+      <workItem from="1684846754463" duration="411000" />
+      <workItem from="1684847649583" duration="654000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -434,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683564737331</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="corrected some file structure">
+      <created>1684844292208</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684844292208</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +457,8 @@
     <MESSAGE value="dependency issue fixed" />
     <MESSAGE value="working on 'file not found'" />
     <MESSAGE value="renamed resourceExtractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed resourceExtractor" />
+    <MESSAGE value="corrected some file structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected some file structure" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

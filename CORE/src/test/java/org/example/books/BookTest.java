@@ -1,14 +1,8 @@
 package org.example.books;
-import org.cirdles.commons.util.ResourceExtractor;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -26,9 +20,7 @@ class BookTest {
 
     @Test
     public void serializeAndDeserialize() throws IOException {
-        ResourceExtractor resourceExtractor = new ResourceExtractor(Book.class);
-        File filename = resourceExtractor.extractResourceAsFile("randomBooks.csv");
-        Set<Book> allBooks = Book.deserializeCSV(filename.getAbsolutePath());
+        Set<Book> allBooks = Book.deserializeCSV("/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/test/resources/org.example/books/randomBooks.csv");
         Book.serializeAsCSV("randomBooksOutput.csv", allBooks);
         Book book1 = new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", "Allen & Unwin");
         Set<Book> books = new TreeSet<>();
@@ -36,21 +28,5 @@ class BookTest {
         Book.serializeAsCSV("test.csv", books);
         Set<Book> books2 = Book.deserializeCSV("test.csv");
         assertEquals(books, books2);
-    }
-
-    @Test
-    public void readCSV() throws IOException {
-        String csvFile = "resources/randomBooks.csv";
-        String separateOn = ",";
-        BufferedReader bufferedReader;
-
-        URL fileUrl = this.getClass().getResource(csvFile);
-        bufferedReader = new BufferedReader(new InputStreamReader(fileUrl.openStream()));
-        String readLine;
-
-        while ((readLine = bufferedReader.readLine()) != null) {
-            String[] book = readLine.split(separateOn);
-            System.out.println(book[0] + " " + book[1] + " " + book[2] + " " + book[3]);
-        }
     }
 }

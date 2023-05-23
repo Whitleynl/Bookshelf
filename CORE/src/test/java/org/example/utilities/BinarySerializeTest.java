@@ -22,7 +22,7 @@ class BinarySerializeTest {
 
     @Test
     public void serAndDeserBinary() throws IOException, ClassNotFoundException {
-        Set<Book> allBooks = Book.deserializeCSV("randomBooks.csv");
+        Set<Book> allBooks = Book.deserializeCSV("/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/test/resources/org.example/books/randomBooks.csv");
         BinarySerialize.serializeAsBinary("randomBooksOutput.ser", allBooks);
         Object obj = BinarySerialize.deserializeBinary("randomBooksOutput.ser");
         assertEquals(allBooks, obj);
