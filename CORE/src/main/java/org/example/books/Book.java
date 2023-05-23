@@ -32,6 +32,9 @@ public class Book implements Comparable<Book>, Serializable {
 
     public static void serializeAsCSV(String path, Set<Book> books) throws IOException {
         Path filePath = Paths.get(path);
+        if(filePath.toFile().exists()) {
+            filePath.toFile().delete();
+        }
         for (Book book : books) {
             byte[] strToBytes = book.prettyPrintCSV().getBytes();
             Files.write(filePath, strToBytes, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
@@ -82,7 +85,7 @@ public class Book implements Comparable<Book>, Serializable {
     }
     @Override
     public int compareTo(Book o) {
-        return this.prettyPrintCSV().compareTo(o.prettyPrintCSV());
+        return -this.prettyPrintCSV().compareTo(o.prettyPrintCSV());
     }
     public String getTitle() {
         return title;

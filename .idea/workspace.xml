@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="corrected some file structure">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="resorting to absolute path">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/org/example/app/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/java/org/example/app/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main/resources/org/example/app/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/randomBooksOutput.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/src/main/java/org/example/books/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/main/java/org/example/books/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/books/BookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE/src/test/java/org/example/utilities/BinarySerializeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/src/test/java/org/example/utilities/BinarySerializeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CORE/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +33,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/APP">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/APP3">
       <ProjectState />
     </projectState>
   </component>
@@ -39,31 +54,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Bookshelf" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bookshelf" type="f1a62948:ProjectNode" />
-                <item name="APP" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bookshelf" type="f1a62948:ProjectNode" />
-                <item name="APP" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bookshelf" type="f1a62948:ProjectNode" />
-                <item name="APP" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bookshelf" type="f1a62948:ProjectNode" />
-                <item name="APP" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testRuntimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -156,13 +146,26 @@
       <command value="gradle APP:clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
+  <component name="RunManager" selected="Application.org.example.app3.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.app.HelloApplication" />
       <module name="Bookshelf.APP.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.app3.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.app3.HelloApplication" />
+      <module name="APP3.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.app3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -242,35 +245,13 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Bookshelf [APP:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="APP:clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.example.app3.HelloApplication" />
         <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
+        <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.BookTest.readCSV" />
-        <item itemvalue="Gradle.Bookshelf [APP:clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +283,8 @@
       <workItem from="1684514266025" duration="247000" />
       <workItem from="1684514625829" duration="481000" />
       <workItem from="1684846754463" duration="411000" />
-      <workItem from="1684847649583" duration="654000" />
+      <workItem from="1684847649583" duration="856000" />
+      <workItem from="1684852398105" duration="3379000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -437,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684844292208</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="resorting to absolute path">
+      <created>1684848336107</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684848336107</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +447,8 @@
     <MESSAGE value="working on 'file not found'" />
     <MESSAGE value="renamed resourceExtractor" />
     <MESSAGE value="corrected some file structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected some file structure" />
+    <MESSAGE value="resorting to absolute path" />
+    <option name="LAST_COMMIT_MESSAGE" value="resorting to absolute path" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

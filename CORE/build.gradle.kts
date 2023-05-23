@@ -9,6 +9,8 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven("https://jitpack.io") // this fixed the cirdles:commons dependency issue
+    maven { url = uri("https://jitpack.io") }
+    maven { url = uri("https://plugins.gradle.org/m2/") }
 }
 
 dependencies {

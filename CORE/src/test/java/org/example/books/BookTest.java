@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.Set;
-import java.util.TreeSet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,12 +20,8 @@ class BookTest {
     @Test
     public void serializeAndDeserialize() throws IOException {
         Set<Book> allBooks = Book.deserializeCSV("/Users/nathanwhitley/Desktop/Bookshelf/CORE/src/test/resources/org.example/books/randomBooks.csv");
-        Book.serializeAsCSV("randomBooksOutput.csv", allBooks);
-        Book book1 = new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy", "Allen & Unwin");
-        Set<Book> books = new TreeSet<>();
-        books.add(book1);
-        Book.serializeAsCSV("test.csv", books);
+        Book.serializeAsCSV("test.csv", allBooks);
         Set<Book> books2 = Book.deserializeCSV("test.csv");
-        assertEquals(books, books2);
+        assertEquals(allBooks, books2);
     }
 }
