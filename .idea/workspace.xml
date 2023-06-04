@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="fixed tests/app runs">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="launch takes args">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP3/src/main/java/org/example/app3/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP3/src/main/java/org/example/app3/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,9 +232,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Application.org.example.app3.HelloApplication" />
         <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
         <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
         <item itemvalue="Gradle.BookTest.readCSV" />
       </list>
@@ -269,6 +270,8 @@
       <workItem from="1684846754463" duration="411000" />
       <workItem from="1684847649583" duration="856000" />
       <workItem from="1684852398105" duration="3468000" />
+      <workItem from="1685380140028" duration="2126000" />
+      <workItem from="1685897101845" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -417,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684855854964</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="launch takes args">
+      <created>1685383181215</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685383181215</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +450,8 @@
     <MESSAGE value="corrected some file structure" />
     <MESSAGE value="resorting to absolute path" />
     <MESSAGE value="fixed tests/app runs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed tests/app runs" />
+    <MESSAGE value="launch takes args" />
+    <option name="LAST_COMMIT_MESSAGE" value="launch takes args" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
