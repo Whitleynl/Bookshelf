@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="launch takes args">
+    <list default="true" id="cad02e21-640c-4c51-9079-2b7a44181086" name="Changes" comment="added Application.launch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP3/src/main/java/org/example/app3/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/APP3/src/main/java/org/example/app3/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +55,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="trying-stuff" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -88,10 +82,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -104,40 +98,29 @@
       <recent name="$PROJECT_DIR$/CORE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CORE/src/test/resources/org.example/books" />
-      <recent name="$PROJECT_DIR$/CORE/src/test/resources/org.example.books" />
       <recent name="$PROJECT_DIR$/CORE" />
-      <recent name="$PROJECT_DIR$/CORE/src/main/resources/org.example" />
       <recent name="$PROJECT_DIR$/CORE/src" />
+      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test/java" />
+      <recent name="$PROJECT_DIR$/CORE/src/main" />
+      <recent name="$PROJECT_DIR$/CORE/src/main/java/org/example/test" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.example.app" />
-      <recent name="com.example" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="org.example.books" />
       <recent name="org.example.utilities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.utilities" />
     </key>
   </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="gradle APP:build" />
-      <command value="gradle APP:clean" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.org.example.app3.HelloApplication">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.app.HelloApplication" />
-      <module name="Bookshelf.APP.main" />
+  <component name="RunManager" selected="Application.BookshelfApp">
+    <configuration name="BinarySerialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.utilities.BinarySerialize" />
+      <module name="Bookshelf.CORE.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.app.*" />
+          <option name="PATTERN" value="org.example.utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,12 +128,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.example.app3.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.app3.HelloApplication" />
+    <configuration name="BookshelfApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.app3.BookshelfApp" />
       <module name="APP3.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.app3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.app.HelloApplication" />
+      <module name="Bookshelf.APP.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,30 +168,6 @@
             <option value=":CORE:test" />
             <option value="--tests" />
             <option value="&quot;org.example.utilities.BinarySerializeTest.serAndDeserBinary&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="BookTest.readCSV" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":CORE:test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.books.BookTest.readCSV&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BookshelfApp" />
         <item itemvalue="Gradle.BookTest.serializeAndDeserialize" />
-        <item itemvalue="Application.org.example.app3.HelloApplication" />
-        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Gradle.BinarySerializeTest.serAndDeserBinary" />
-        <item itemvalue="Gradle.BookTest.readCSV" />
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.BinarySerialize" />
       </list>
     </recent_temporary>
   </component>
@@ -256,22 +228,6 @@
       <workItem from="1680982999519" duration="7175000" />
       <workItem from="1681071787450" duration="3135000" />
       <workItem from="1681140930294" duration="20000" />
-      <workItem from="1681501418624" duration="3472000" />
-      <workItem from="1682093646031" duration="39000" />
-      <workItem from="1682109839292" duration="1596000" />
-      <workItem from="1682356629788" duration="2329000" />
-      <workItem from="1683562922231" duration="613000" />
-      <workItem from="1683563593845" duration="2085000" />
-      <workItem from="1684363957419" duration="57000" />
-      <workItem from="1684364066832" duration="3117000" />
-      <workItem from="1684513992290" duration="142000" />
-      <workItem from="1684514266025" duration="247000" />
-      <workItem from="1684514625829" duration="481000" />
-      <workItem from="1684846754463" duration="411000" />
-      <workItem from="1684847649583" duration="856000" />
-      <workItem from="1684852398105" duration="3468000" />
-      <workItem from="1685380140028" duration="2126000" />
-      <workItem from="1685897101845" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1679771560266</created>
@@ -357,77 +313,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681081354692</updated>
     </task>
-    <task id="LOCAL-00013" summary="dependency issue fixed">
-      <created>1681504890565</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1681504890565</updated>
-    </task>
-    <task id="LOCAL-00014" summary="working on 'file not found'">
-      <created>1682110098922</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1682110098922</updated>
-    </task>
-    <task id="LOCAL-00015" summary="working on 'file not found'">
-      <created>1682356999219</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1682356999220</updated>
-    </task>
-    <task id="LOCAL-00016" summary="working on 'file not found'">
-      <created>1682358925413</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1682358925413</updated>
-    </task>
-    <task id="LOCAL-00017" summary="renamed resourceExtractor">
-      <created>1683563111698</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1683563111698</updated>
-    </task>
-    <task id="LOCAL-00018" summary="renamed resourceExtractor">
-      <created>1683564737331</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1683564737331</updated>
-    </task>
-    <task id="LOCAL-00019" summary="corrected some file structure">
-      <created>1684844292208</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1684844292208</updated>
-    </task>
-    <task id="LOCAL-00020" summary="resorting to absolute path">
-      <created>1684848336107</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1684848336107</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fixed tests/app runs">
-      <created>1684855854964</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1684855854964</updated>
-    </task>
-    <task id="LOCAL-00022" summary="launch takes args">
-      <created>1685383181215</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1685383181215</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,14 +330,7 @@
     <MESSAGE value="app displays grid" />
     <MESSAGE value="app displays grid and welcome message" />
     <MESSAGE value="dependencies updated" />
-    <MESSAGE value="dependency issue fixed" />
-    <MESSAGE value="working on 'file not found'" />
-    <MESSAGE value="renamed resourceExtractor" />
-    <MESSAGE value="corrected some file structure" />
-    <MESSAGE value="resorting to absolute path" />
-    <MESSAGE value="fixed tests/app runs" />
-    <MESSAGE value="launch takes args" />
-    <option name="LAST_COMMIT_MESSAGE" value="launch takes args" />
+    <option name="LAST_COMMIT_MESSAGE" value="dependencies updated" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
