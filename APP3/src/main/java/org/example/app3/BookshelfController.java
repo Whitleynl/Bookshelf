@@ -12,7 +12,6 @@ public class BookshelfController {
     private ListView<String> bookListView;
     @FXML
     protected void handleStartButtonAction() {
-
         ObservableList<String>bookList = FXCollections.observableArrayList("Book 1", "Book 2", "Book 3");
         bookListView.setItems(bookList);
     }
