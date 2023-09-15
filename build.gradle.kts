@@ -8,7 +8,6 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven("https://jitpack.io") // this fixed the cirdles:commons dependency issue
     maven { url = uri("https://jitpack.io") }
     maven { url = uri("https://plugins.gradle.org/m2/") }
 }
@@ -16,7 +15,7 @@ repositories {
 dependencies {
     implementation("com.github.cirdles:commons:bc38781605")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
 }
 
 extraJavaModuleInfo {

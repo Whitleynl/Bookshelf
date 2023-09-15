@@ -17,6 +17,7 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven { url = uri("https://jitpack.io") }
+}
 
     dependencies {
         implementation(project(":CORE"))
@@ -40,5 +41,3 @@ repositories {
     application {
         mainClass.set("org.example.app.BookshelfApp")
     }
-
-}
