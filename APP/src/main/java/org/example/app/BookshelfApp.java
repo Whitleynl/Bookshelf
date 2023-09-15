@@ -36,5 +36,3 @@ public class BookshelfApp extends javafx.application.Application {
         controller.sortingComboBox.setItems(sortingOptions);
     }
 }
-
-//https://www.baeldung.com/java-9-modularity

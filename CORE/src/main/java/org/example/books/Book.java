@@ -85,9 +85,14 @@ public class Book implements Comparable<Book>, Serializable {
         return allBooks;
     }
 
+//    public static Set<Book> deserializeCSV(String fileName){
+//        ResourceExtractor RESOURCE_EXTRACTOR = new ResourceExtractor(Book.class);
+//        Path resourcePath = RESOURCE_EXTRACTOR.extractResourceAsPath(fileName); //this line returns null
+//        if (resourcePath == null) throw new IllegalArgumentException("Could not find resource " + fileName);
+//        return deserializeCSV(resourcePath);
+//    }
     public static Set<Book> deserializeCSV(String fileName){
-        ResourceExtractor RESOURCE_EXTRACTOR = new ResourceExtractor(Book.class);
-        Path resourcePath = RESOURCE_EXTRACTOR.extractResourceAsPath(fileName); //this line returns null
+        Path resourcePath = Paths.get(fileName);
         if (resourcePath == null) throw new IllegalArgumentException("Could not find resource " + fileName);
         return deserializeCSV(resourcePath);
     }
