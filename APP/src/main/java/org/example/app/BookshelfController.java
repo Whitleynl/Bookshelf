@@ -2,11 +2,12 @@ package org.example.app;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.example.books.Book;
-import java.util.Comparator;
-import java.util.Set;
+
+import java.util.*;
 
 public class BookshelfController {
     public Label welcomeText;
@@ -16,6 +17,12 @@ public class BookshelfController {
     private ListView<Book> bookListView;
     @FXML
     ComboBox<String> sortingComboBox;
+    @FXML
+    private TextField newListName;
+    @FXML
+    ListView<String> customListsView;
+
+    private Map<String, Set<Book>> customLists = new HashMap<>();
     public void initialize() {
         bookListView.setCellFactory(bookListView -> new ListCell<>() {
             /**
@@ -89,5 +96,16 @@ public class BookshelfController {
 
     private void updateBookListUI() {
         bookListView.refresh();
+    }
+
+    @FXML
+    //this method needs to add the selected book to the user's custom list
+    public void handleAddToList(ActionEvent event) {
+        Set<Book> booksForCustomList = customLists.get(newListName.getText());
+        if(booksForCustomList == null) {
+            booksForCustomList = new HashSet<>();
+            customLists.put(String.valueOf(newListName), booksForCustomList);
+        }
+        booksForCustomList.add((Book) booksForCustomList);
     }
 }

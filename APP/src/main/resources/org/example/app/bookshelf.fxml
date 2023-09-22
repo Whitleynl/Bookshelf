@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="789.0" prefWidth="573.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.BookshelfController">
+<VBox alignment="CENTER" prefHeight="789.0" prefWidth="573.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.BookshelfController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -16,6 +23,8 @@
         </font></Label>
     <ToolBar prefHeight="40.0" prefWidth="200.0">
         <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefWidth="89.0" promptText="Sort By" />
+      <Button mnemonicParsing="false" text="Create New Custom List" />
+      <Button fx:id="addToList" mnemonicParsing="false" onAction="#handleAddToList" text="Add to Custom List" />
         <Button onAction="#handleExitButtonAction" text="EXIT" />
     </ToolBar>
     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select book to show details (Author, Publisher, etc...)">
@@ -24,5 +33,7 @@
         </font>
     </Text>
     <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefWidth="200.0" />
+   <TextField text="Enter Name of New List" />
+   <ListView prefHeight="200.0" prefWidth="200.0" />
     <TextArea fx:id="bookDetailsTextArea" prefHeight="306.0" prefWidth="533.0" />
 </VBox>
