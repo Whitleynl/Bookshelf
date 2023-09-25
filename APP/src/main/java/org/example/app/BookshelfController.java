@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.example.books.Book;
+import javafx.scene.control.Alert;
 
 import java.util.*;
 
@@ -13,6 +14,10 @@ public class BookshelfController {
     public Label welcomeText;
     @FXML
     public TextArea bookDetailsTextArea;
+    @FXML
+    public Button addToList;
+    @FXML
+    public Button createNewList;
     @FXML
     private ListView<Book> bookListView;
     @FXML
@@ -22,7 +27,7 @@ public class BookshelfController {
     @FXML
     ListView<String> customListsView;
 
-    private Map<String, Set<Book>> customLists = new HashMap<>();
+    private final Map<String, Set<Book>> customLists = new HashMap<>();
     public void initialize() {
         bookListView.setCellFactory(bookListView -> new ListCell<>() {
             /**
@@ -40,6 +45,14 @@ public class BookshelfController {
                 }
             }
         });
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String header, String content) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 
     /**
@@ -83,7 +96,7 @@ public class BookshelfController {
             case "Publisher" -> bookListView.getItems().sort(Comparator.comparing(Book::getPublisher));
             default -> bookListView.getItems().sort(Comparator.comparing(Book::getTitle));
         }
-        updateBookListUI(); //refreshes the bookListView
+        updateBookListUI();
     }
 
     /**
@@ -98,14 +111,47 @@ public class BookshelfController {
         bookListView.refresh();
     }
 
+    private void updateCustomListsUI() {
+        customListsView.setItems(FXCollections.observableArrayList(customLists.keySet()));
+        customListsView.refresh();
+    }
+    @FXML
+    public void createNewList() {
+        //this method needs to create a new custom list and add it to the customListsView
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Create new List:");
+        dialog.setHeaderText("Enter the name of your new list");
+
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(name -> {
+            if(customLists.containsKey(name)) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("List already exists");
+                alert.setContentText("Please enter a different name for your new list");
+                alert.showAndWait();
+            }
+            else {
+                customLists.put(name, new TreeSet<>());
+                updateCustomListsUI();
+        }
+        });
+    }
+
     @FXML
     //this method needs to add the selected book to the user's custom list
-    public void handleAddToList(ActionEvent event) {
-        Set<Book> booksForCustomList = customLists.get(newListName.getText());
-        if(booksForCustomList == null) {
-            booksForCustomList = new HashSet<>();
-            customLists.put(String.valueOf(newListName), booksForCustomList);
+    public void addToList(ActionEvent event) {
+        Book selectedBook = bookListView.getSelectionModel().getSelectedItem();
+        String selectedList = customListsView.getSelectionModel().getSelectedItem();
+        if (selectedBook == null) {
+            showAlert(Alert.AlertType.ERROR, "Nothing Selected", "No book selected", "Please select a book to add to your custom list");
+            return;
         }
-        booksForCustomList.add((Book) booksForCustomList);
-    }
+        if (selectedList == null) {
+            showAlert(Alert.AlertType.ERROR, "Nothing Selected", "No list selected", "Please select a list to add your book to");
+            return;
+        }
+        Set<Book> booksForNewList = customLists.get(selectedList);
+        booksForNewList.add(selectedBook);
+        }
 }

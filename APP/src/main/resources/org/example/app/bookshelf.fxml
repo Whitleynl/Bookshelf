@@ -23,8 +23,8 @@
         </font></Label>
     <ToolBar prefHeight="40.0" prefWidth="200.0">
         <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefWidth="89.0" promptText="Sort By" />
-      <Button mnemonicParsing="false" text="Create New Custom List" />
-      <Button fx:id="addToList" mnemonicParsing="false" onAction="#handleAddToList" text="Add to Custom List" />
+      <Button fx:id="createNewList" text="Create New List" onAction="#createNewList" />
+      <Button fx:id="addToList" mnemonicParsing="false" onAction="#addToList" text="Add to Custom List" />
         <Button onAction="#handleExitButtonAction" text="EXIT" />
     </ToolBar>
     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select book to show details (Author, Publisher, etc...)">
