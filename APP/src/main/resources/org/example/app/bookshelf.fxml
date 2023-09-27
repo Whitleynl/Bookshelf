@@ -34,6 +34,6 @@
     </Text>
     <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefWidth="200.0" />
    <TextField text="Enter Name of New List" />
-   <ListView prefHeight="200.0" prefWidth="200.0" />
+   <ListView fx:id="customListsView" prefHeight="200.0" prefWidth="200.0" />
     <TextArea fx:id="bookDetailsTextArea" prefHeight="306.0" prefWidth="533.0" />
 </VBox>

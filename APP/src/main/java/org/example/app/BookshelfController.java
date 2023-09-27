@@ -133,9 +133,14 @@ public class BookshelfController {
             }
             else {
                 customLists.put(name, new TreeSet<>());
-                updateCustomListsUI();
+                updateCustomListView();
         }
         });
+    }
+
+    private void updateCustomListView() {
+        customListsView.setItems(FXCollections.observableArrayList(customLists.keySet()));
+        customListsView.refresh();
     }
 
     @FXML
