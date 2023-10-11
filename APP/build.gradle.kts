@@ -23,10 +23,6 @@ repositories {
         implementation(project(":CORE"))
         testImplementation(platform("org.junit:junit-bom:5.9.1"))
         testImplementation("org.junit.jupiter:junit-jupiter")
-        implementation("org.openjfx:javafx:17")
-        implementation("org.openjfx:javafx-base:17")
-        implementation("org.openjfx:javafx-controls:17")
-        implementation("org.openjfx:javafx-fxml:17")
     }
 
     extraJavaModuleInfo {
