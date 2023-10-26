@@ -36,4 +36,5 @@ repositories {
 
     application {
         mainClass.set("org.example.app.BookshelfApp")
+        mainModule.set("Bookshelf.APP")
     }
