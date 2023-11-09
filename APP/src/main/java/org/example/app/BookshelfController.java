@@ -28,13 +28,14 @@ public class BookshelfController {
     @FXML
     ComboBox<String> sortingComboBox;
 
-    public void initialize() {
-        bookListView.setCellFactory(bookListView -> new ListCell<>() {
-            /**
-             * @param book  The new item for the cell.
-             * @param empty whether this cell represents data from the list. If empty,
-             *              will appear as an empty cell.
-             */
+    @FXML
+    private void initialize() {
+        setUpBookListView();
+        setUpCustomListsView();
+    }
+
+    private void setUpBookListView() {
+        bookListView.setCellFactory(param -> new ListCell<Book>() {
             @Override
             protected void updateItem(Book book, boolean empty) {
                 super.updateItem(book, empty);
@@ -43,21 +44,23 @@ public class BookshelfController {
                 } else {
                     setText(book.getTitle());
                 }
-                bookListView.setOnDragDetected(event -> {
-                    if (bookListView.getSelectionModel().getSelectedItem() != null) {
-                        Dragboard db = bookListView.startDragAndDrop(TransferMode.MOVE);
-                        ClipboardContent content = new ClipboardContent();
-                        content.putString(bookListView.getSelectionModel().getSelectedItem().getTitle());
-                        db.setContent(content);
-                        event.consume();
-                    }
-                });
             }
         });
 
-        customListsView.setCellFactory(param -> new ListCell<>() {
-            @Override
-            protected void updateItem(CustomList item, boolean empty){
+        bookListView.setOnDragDetected(event -> {
+            if (bookListView.getSelectionModel().getSelectedItem() != null) {
+                Dragboard db = bookListView.startDragAndDrop(TransferMode.MOVE);
+                ClipboardContent content = new ClipboardContent();
+                content.putString(bookListView.getSelectionModel().getSelectedItem().getTitle());
+                db.setContent(content);
+                event.consume();
+            }
+        });
+    }
+
+    protected void setUpCustomListsView() {
+        bookListView.setCellFactory(bookListView -> new ListCell<>() {
+            private void updateItem(CustomList item, boolean empty){
                 super.updateItem(item, empty);
                 if (empty || item == null || item.getName() == null) {
                     setText(null);
@@ -71,19 +74,25 @@ public class BookshelfController {
             if (event.getGestureSource() != customListsView &&
                     event.getDragboard().hasString()) {
                 event.acceptTransferModes(TransferMode.MOVE);
+                System.out.println("drag accepted");
             }
             event.consume();
         });
 
         customListsView.setOnDragDropped(event -> {
-            Dragboard db = event.getDragboard();
             boolean success = false;
+            Dragboard db = event.getDragboard();
             if (db.hasString()) {
+                System.out.println("Dragboard has string: " + db.getString());
                 String book = db.getString();
                 CustomList targetList = customListsView.getSelectionModel().getSelectedItem();
                 if (targetList != null) {
                     targetList.getBooks().add(book);
                     success = true;
+                    System.out.println("book added to list");
+                    System.out.println("List now contains: " + targetList.getBooks());
+                } else {
+                    System.out.println("Dragboard does not have string");
                 }
             }
             event.setDropCompleted(success);
