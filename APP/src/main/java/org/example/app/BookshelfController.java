@@ -5,6 +5,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import org.example.books.Book;
 import java.util.Comparator;
 import java.util.Set;
@@ -13,15 +17,14 @@ public class BookshelfController {
     public Label welcomeText;
     @FXML
     public TextArea bookDetailsTextArea;
+    @FXML
     public Button createListButton;
     @FXML
     private ListView<Book> bookListView;
-
     @FXML
     private TextField newListNameField;
-
     @FXML
-    private ListView<String> customListsView;
+    private ListView<CustomList> customListsView;
     @FXML
     ComboBox<String> sortingComboBox;
 
@@ -40,7 +43,51 @@ public class BookshelfController {
                 } else {
                     setText(book.getTitle());
                 }
+                bookListView.setOnDragDetected(event -> {
+                    if (bookListView.getSelectionModel().getSelectedItem() != null) {
+                        Dragboard db = bookListView.startDragAndDrop(TransferMode.MOVE);
+                        ClipboardContent content = new ClipboardContent();
+                        content.putString(bookListView.getSelectionModel().getSelectedItem().getTitle());
+                        db.setContent(content);
+                        event.consume();
+                    }
+                });
             }
+        });
+
+        customListsView.setCellFactory(param -> new ListCell<>() {
+            @Override
+            protected void updateItem(CustomList item, boolean empty){
+                super.updateItem(item, empty);
+                if (empty || item == null || item.getName() == null) {
+                    setText(null);
+                } else {
+                    setText(item.getName());
+                }
+            }
+        });
+
+        customListsView.setOnDragOver(event -> {
+            if (event.getGestureSource() != customListsView &&
+                    event.getDragboard().hasString()) {
+                event.acceptTransferModes(TransferMode.MOVE);
+            }
+            event.consume();
+        });
+
+        customListsView.setOnDragDropped(event -> {
+            Dragboard db = event.getDragboard();
+            boolean success = false;
+            if (db.hasString()) {
+                String book = db.getString();
+                CustomList targetList = customListsView.getSelectionModel().getSelectedItem();
+                if (targetList != null) {
+                    targetList.getBooks().add(book);
+                    success = true;
+                }
+            }
+            event.setDropCompleted(success);
+            event.consume();
         });
     }
 
@@ -98,14 +145,17 @@ public class BookshelfController {
 
     @FXML
     private void handleCreateListAction() {
-        if (!newListNameField.getText().isEmpty()) {
-            customListsView.getItems().add(newListNameField.getText());
+        String newListName = newListNameField.getText().trim();
+        if (!newListName.isEmpty()) {
+            CustomList newList = new CustomList(newListName);
+            customListsView.getItems().add(newList);
             newListNameField.clear();
-        } else {
+        }
+        else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("No list name entered");
-            alert.setContentText("Please enter a name for the new list");
+            alert.setHeaderText("Invalid List Name");
+            alert.setContentText("Please enter a valid list name.");
             alert.showAndWait();
         }
     }
