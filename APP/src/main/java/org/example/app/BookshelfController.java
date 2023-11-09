@@ -2,6 +2,7 @@ package org.example.app;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.example.books.Book;
@@ -12,10 +13,18 @@ public class BookshelfController {
     public Label welcomeText;
     @FXML
     public TextArea bookDetailsTextArea;
+    public Button createListButton;
     @FXML
     private ListView<Book> bookListView;
+
+    @FXML
+    private TextField newListNameField;
+
+    @FXML
+    private ListView<String> customListsView;
     @FXML
     ComboBox<String> sortingComboBox;
+
     public void initialize() {
         bookListView.setCellFactory(bookListView -> new ListCell<>() {
             /**
@@ -63,7 +72,7 @@ public class BookshelfController {
 
     /**
      * @param selectedSortingOption the selected sorting option from the sortingComboBox
-     * sorts the bookListView based on the selected sorting option using a switch statement and the Comparator class
+     *                              sorts the bookListView based on the selected sorting option using a switch statement and the Comparator class
      */
     //this still needs to account for articles in the titles (a, an, the)
     public void sortBooks(String selectedSortingOption) {
@@ -86,6 +95,21 @@ public class BookshelfController {
         String selectedSortingOption = sortingComboBox.getSelectionModel().getSelectedItem();
         sortBooks(selectedSortingOption);
     }
+
+    @FXML
+    private void handleCreateListAction() {
+        if (!newListNameField.getText().isEmpty()) {
+            customListsView.getItems().add(newListNameField.getText());
+            newListNameField.clear();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("No list name entered");
+            alert.setContentText("Please enter a name for the new list");
+            alert.showAndWait();
+        }
+    }
+
 
     private void updateBookListUI() {
         bookListView.refresh();

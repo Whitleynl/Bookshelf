@@ -21,13 +21,17 @@
             <Font name="Droid Sans Mono" size="13.0" />
          </font></Button>
     </ToolBar>
-    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select book to show details (Author, Publisher, etc...)" wrappingWidth="536.568359375">
-        <font>
-            <Font name="Droid Sans Mono" size="14.0" />
-        </font>
-    </Text>
     <HBox prefHeight="400.0" prefWidth="306.0" spacing="20.0">
-      <ListView prefHeight="400.0" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 2; -fx-border-color: DAA520;" HBox.hgrow="ALWAYS" /> <!-- Here's the HBox to organize ListView and TextArea side by side -->
+        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                <Label text="My Lists">
+                        <font>
+                            <Font name="Droid Sans Mono" size="14.0" />
+                        </font>
+                </Label>
+        <TextField fx:id="newListNameField" promptText="New List Name" />
+            <Button fx:id="createListButton" onAction="#handleCreateListAction" text="Create New List" />
+            <ListView fx:id="customListsView" style="-fx-border-style: solid; -fx-border-width: 2; -fx-border-color: DAA520;" />
+        </VBox> <!-- Here's the HBox to organize ListView and TextArea side by side -->
         <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefHeight="400.0" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 2; -fx-border-color: DAA520;" styleClass="border" HBox.hgrow="ALWAYS" />
         <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: DAA520; -fx-border-width: 2; -fx-border-style: solid;" HBox.hgrow="ALWAYS" />
     </HBox>
