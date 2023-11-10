@@ -4,9 +4,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.example.books.Book;
 
-public class CustomList extends Book {
+public class CustomList  {
     private final String name;
-    private final ObservableList<String> books;
+    private final ObservableList<Book> books;
 
     public CustomList(String name) {
         this.name = name;
@@ -17,11 +17,10 @@ public class CustomList extends Book {
         return name;
     }
 
-    public ObservableList<String> getBooks() {
+    public ObservableList<Book> getBooks() {
         return books;
     }
 
-    @Override
     public String toString() {
         return name;
     }

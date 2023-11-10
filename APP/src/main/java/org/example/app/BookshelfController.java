@@ -11,6 +11,8 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import org.example.books.Book;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class BookshelfController {
@@ -28,14 +30,16 @@ public class BookshelfController {
     @FXML
     ComboBox<String> sortingComboBox;
 
+    private final Map<String, Book> titleToBookMap = new HashMap<>();
+
     @FXML
     private void initialize() {
         setUpBookListView();
         setUpCustomListsView();
     }
 
-    private void setUpBookListView() {
-        bookListView.setCellFactory(param -> new ListCell<Book>() {
+    protected void setUpBookListView() {
+        bookListView.setCellFactory(listView -> new ListCell<>() {
             @Override
             protected void updateItem(Book book, boolean empty) {
                 super.updateItem(book, empty);
@@ -59,8 +63,9 @@ public class BookshelfController {
     }
 
     protected void setUpCustomListsView() {
-        bookListView.setCellFactory(bookListView -> new ListCell<>() {
-            private void updateItem(CustomList item, boolean empty){
+        customListsView.setCellFactory(listView -> new ListCell<CustomList>() {
+            @Override
+            protected void updateItem(CustomList item, boolean empty){
                 super.updateItem(item, empty);
                 if (empty || item == null || item.getName() == null) {
                     setText(null);
@@ -83,16 +88,15 @@ public class BookshelfController {
             boolean success = false;
             Dragboard db = event.getDragboard();
             if (db.hasString()) {
-                System.out.println("Dragboard has string: " + db.getString());
-                String book = db.getString();
-                CustomList targetList = customListsView.getSelectionModel().getSelectedItem();
-                if (targetList != null) {
-                    targetList.getBooks().add(book);
-                    success = true;
-                    System.out.println("book added to list");
-                    System.out.println("List now contains: " + targetList.getBooks());
-                } else {
-                    System.out.println("Dragboard does not have string");
+                String bookTitle = db.getString();
+                Book book = titleToBookMap.get(bookTitle);
+                if (book != null) {
+                    CustomList targetList = customListsView.getSelectionModel().getSelectedItem();
+                    if (targetList != null) {
+                        targetList.getBooks().add(book);
+                        success = true;
+                        System.out.println("book added to list");
+                    }
                 }
             }
             event.setDropCompleted(success);
@@ -107,6 +111,9 @@ public class BookshelfController {
     public void setBooks(Set<Book> books) {
         ObservableList<Book> bookList = FXCollections.observableArrayList(books);
         bookListView.setItems(bookList);
+        for (Book book : books) {
+            titleToBookMap.put(book.getTitle(), book);
+        }
     }
 
     public void handleExitButtonAction() {
