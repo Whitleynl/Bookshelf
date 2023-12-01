@@ -9,11 +9,11 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
+import javafx.stage.FileChooser;
 import org.example.books.Book;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+
+import java.io.File;
+import java.util.*;
 
 public class BookshelfController {
     public Label welcomeText;
@@ -22,6 +22,12 @@ public class BookshelfController {
     @FXML
     public Button createListButton;
     @FXML
+    public ComboBox methodComboBox;
+    @FXML
+    public Button executeButton;
+    @FXML
+    public File selectedFile;
+    @FXML
     private ListView<Book> bookListView;
     @FXML
     private TextField newListNameField;
@@ -29,6 +35,10 @@ public class BookshelfController {
     private ListView<CustomList> customListsView;
     @FXML
     ComboBox<String> sortingComboBox;
+    @FXML
+    private Label statusLabel;
+
+    private final Set<Book> books = new TreeSet<>();
 
     private final Map<String, Book> titleToBookMap = new HashMap<>();
 
@@ -176,8 +186,57 @@ public class BookshelfController {
         }
     }
 
+    @FXML
+    private void handleOpenFileAction() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+        // Set extension filters, if needed
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("All Files", "*.*"));
+        // Show open file dialog
+        File file = fileChooser.showOpenDialog(null);
+        if (file != null) {
+            // Handle the file (e.g., open it with a desktop application or display its content in the UI)
+            System.out.println("File selected: " + file.getAbsolutePath());
+        }
+    }
 
     private void updateBookListUI() {
         bookListView.refresh();
+    }
+
+    @FXML
+    private void handleMethodSelectionAction() {
+        String selectedMethod = (String) methodComboBox.getSelectionModel().getSelectedItem();
+        if (selectedMethod != null) {
+            // Update the UI or set flags based on the selected method
+            statusLabel.setText("Method selected: " + selectedMethod);
+
+            // If you need to enable or disable buttons based on the selection
+            // executeButton.setDisable(false);
+        }
+    }
+
+    @FXML
+    private void handleExecuteAction() {
+        String selectedMethod = (String) methodComboBox.getSelectionModel().getSelectedItem();
+        if (selectedMethod != null && selectedFile != null) {
+            try {
+                switch (selectedMethod) {
+                    case "Serialize as CSV":
+                        // Call serializeAsCSV with the selected file's path:
+                        Book.serializeAsCSV(selectedFile.getAbsolutePath(), books);
+                        break;
+                    case "Deserialize CSV":
+                        Set<Book> deserializedBooks = Book.deserializeCSV(selectedFile.toPath());
+                        // Handle the deserialized books (display them or process them further)
+                        break;
+                    // Add more cases as needed for additional methods
+                }
+            } catch (Exception e) {
+                // Handle exceptions appropriately
+                e.printStackTrace();
+            }
+        }
     }
 }

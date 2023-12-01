@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="789.0" prefWidth="573.0" spacing="20.0" style="-fx-background-color: F7E07C; -fx-border-color: DAA520; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.BookshelfController">
+<VBox alignment="CENTER" prefHeight="789.0" prefWidth="573.0" spacing="20.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.BookshelfController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label fx:id="welcomeText" text="Welcome to your Bookshelf">
+
+    <Label fx:id="welcomeText" text="Welcome to your file manager">
         <font>
             <Font name="Droid Sans Mono" size="20.0" />
         </font>
     </Label>
-    <ToolBar prefHeight="45.0" prefWidth="569.0" style="-fx-border-color: DAA520; -fx-border-style: solid; -fx-border-width: 2; -fx-background-color: white;">
-        <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefWidth="89.0" promptText="Sort By" style="-fx-font-family: Droid Sans Mono; -fx-padding: 1;" />
-        <Button onAction="#handleExitButtonAction" style="-fx-padding: 6;" text="EXIT" textAlignment="CENTER">
-         <font>
-            <Font name="Droid Sans Mono" size="13.0" />
-         </font></Button>
-    </ToolBar>
-    <HBox prefHeight="400.0" prefWidth="306.0" spacing="20.0">
-        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
-                <Label text="My Lists">
-                        <font>
-                            <Font name="Droid Sans Mono" size="14.0" />
-                        </font>
-                </Label>
+
+    <ToolBar prefHeight="45.0" prefWidth="569.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: white;">
+        <Button onAction="#handleOpenFileAction" text="Open File" />
+        <ComboBox fx:id="methodComboBox" onAction="#handleMethodSelectionAction" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Serialize as CSV" />
+                    <String fx:value="Deserialize CSV" />
+                    <!-- Add more methods if required -->
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button fx:id="executeButton" onAction="#handleExecuteAction" text="Execute" />
+        <Button onAction="#handleExitButtonAction" style="-fx-padding: 6;" text="EXIT" textAlignment="CENTER" />
         <TextField fx:id="newListNameField" promptText="New List Name" />
-            <Button fx:id="createListButton" onAction="#handleCreateListAction" text="Create New List" />
-            <ListView fx:id="customListsView" style="-fx-border-style: solid; -fx-border-width: 2; -fx-border-color: DAA520;" />
-        </VBox> <!-- Here's the HBox to organize ListView and TextArea side by side -->
-        <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefHeight="400.0" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 2; -fx-border-color: DAA520;" styleClass="border" HBox.hgrow="ALWAYS" />
-        <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: DAA520; -fx-border-width: 2; -fx-border-style: solid;" HBox.hgrow="ALWAYS" />
+        <Button fx:id="createListButton" onAction="#handleCreateListAction" text="Create New List" />
+    </ToolBar>
+
+    <HBox spacing="10">
+        <VBox>
+            <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefWidth="89.0" promptText="Sort By" style="-fx-font-family: Droid Sans Mono; -fx-padding: 1;" />
+            <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefHeight="400.0" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" />
+        </VBox>
+        <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid;" />
+        <VBox spacing="10">
+            <ListView fx:id="customListsView" prefHeight="428.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" />
+        </VBox>
     </HBox>
 </VBox>
