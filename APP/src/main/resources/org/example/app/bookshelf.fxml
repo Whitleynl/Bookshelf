@@ -31,18 +31,16 @@
         </ComboBox>
         <Button fx:id="executeButton" onAction="#handleExecuteAction" text="Execute" />
         <Button onAction="#handleExitButtonAction" style="-fx-padding: 6;" text="EXIT" textAlignment="CENTER" />
-        <TextField fx:id="newListNameField" promptText="New List Name" />
-        <Button fx:id="createListButton" onAction="#handleCreateListAction" text="Create New List" />
     </ToolBar>
 
     <HBox spacing="10">
-        <VBox>
+        <VBox HBox.hgrow="ALWAYS" spacing="10">
             <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefWidth="89.0" promptText="Sort By" style="-fx-font-family: Droid Sans Mono; -fx-padding: 1;" />
-            <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefHeight="400.0" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" />
+            <ListView fx:id="bookListView" onMouseClicked= "#handleBookSelectedAction" VBox.vgrow="ALWAYS" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" />
         </VBox>
-        <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid;" />
-        <VBox spacing="10">
-            <ListView fx:id="customListsView" prefHeight="428.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" />
+        <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid;" HBox.hgrow="ALWAYS"/>
+        <VBox spacing="10" VBox.vgrow="ALWAYS">
+            <ListView fx:id="customListsView" prefHeight="428.0" prefWidth="185.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" VBox.vgrow="ALWAYS" />
         </VBox>
     </HBox>
 </VBox>

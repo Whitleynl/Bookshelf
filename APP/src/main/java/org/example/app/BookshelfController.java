@@ -169,22 +169,22 @@ public class BookshelfController {
         sortBooks(selectedSortingOption);
     }
 
-    @FXML
-    private void handleCreateListAction() {
-        String newListName = newListNameField.getText().trim();
-        if (!newListName.isEmpty()) {
-            CustomList newList = new CustomList(newListName);
-            customListsView.getItems().add(newList);
-            newListNameField.clear();
-        }
-        else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Invalid List Name");
-            alert.setContentText("Please enter a valid list name.");
-            alert.showAndWait();
-        }
-    }
+//    @FXML
+//    private void handleCreateListAction() {
+//        String newListName = newListNameField.getText().trim();
+//        if (!newListName.isEmpty()) {
+//            CustomList newList = new CustomList(newListName);
+//            customListsView.getItems().add(newList);
+//            newListNameField.clear();
+//        }
+//        else {
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Error");
+//            alert.setHeaderText("Invalid List Name");
+//            alert.setContentText("Please enter a valid list name.");
+//            alert.showAndWait();
+//        }
+//    }
 
     @FXML
     private void handleOpenFileAction() {

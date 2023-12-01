@@ -25,7 +25,8 @@ public class BookshelfApp extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         Set<Book> books = Book.deserializeCSV("randomBooks.csv");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bookshelf.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setResizable(true);
         stage.setTitle("Bookshelf");
         stage.setScene(scene);
         stage.show();
