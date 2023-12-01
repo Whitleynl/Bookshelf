@@ -5,11 +5,10 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="789.0" prefWidth="573.0" spacing="20.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.BookshelfController">
+<VBox alignment="CENTER" prefHeight="570.0" prefWidth="573.0" spacing="20.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.BookshelfController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="0" />
+        <Insets left="20.0" right="20.0" />
     </padding>
     <MenuBar>
         <menus>
@@ -31,12 +30,6 @@
         </menus>
     </MenuBar>
 
-    <Label fx:id="welcomeText" text="Welcome to your file manager">
-        <font>
-            <Font name="Droid Sans Mono" size="20.0" />
-        </font>
-    </Label>
-
     <ToolBar prefHeight="45.0" prefWidth="569.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: white;">
         <Button onAction="#handleOpenFileAction" text="Open File" />
         <ComboBox fx:id="methodComboBox" onAction="#handleMethodSelectionAction" prefWidth="150.0">
@@ -54,7 +47,7 @@
 
     <HBox spacing="10">
         <VBox spacing="10" HBox.hgrow="ALWAYS">
-            <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefWidth="89.0" promptText="Sort By" style="-fx-font-family: Droid Sans Mono; -fx-padding: 1;" />
+            <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefHeight="28.0" prefWidth="104.0" promptText="Sort Items" style="-fx-font-family: Droid Sans Mono; -fx-padding: 1;" />
             <ListView fx:id="bookListView" onMouseClicked="#handleBookSelectedAction" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: black;" VBox.vgrow="ALWAYS" />
         </VBox>
         <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid;" HBox.hgrow="ALWAYS" />
