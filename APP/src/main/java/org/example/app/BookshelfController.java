@@ -13,6 +13,7 @@ import javafx.stage.FileChooser;
 import org.example.books.Book;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class BookshelfController {
@@ -218,25 +219,12 @@ public class BookshelfController {
     }
 
     @FXML
-    private void handleExecuteAction() {
-        String selectedMethod = (String) methodComboBox.getSelectionModel().getSelectedItem();
-        if (selectedMethod != null && selectedFile != null) {
-            try {
-                switch (selectedMethod) {
-                    case "Serialize as CSV":
-                        // Call serializeAsCSV with the selected file's path:
-                        Book.serializeAsCSV(selectedFile.getAbsolutePath(), books);
-                        break;
-                    case "Deserialize CSV":
-                        Set<Book> deserializedBooks = Book.deserializeCSV(selectedFile.toPath());
-                        // Handle the deserialized books (display them or process them further)
-                        break;
-                    // Add more cases as needed for additional methods
-                }
-            } catch (Exception e) {
-                // Handle exceptions appropriately
-                e.printStackTrace();
-            }
-        }
+    public void handleSerializeAction(ActionEvent actionEvent) throws IOException {
+        Book.serializeAsCSV(selectedFile.getAbsolutePath(), books);
+    }
+
+    @FXML
+    public void handleDeserializeAction(ActionEvent actionEvent) {
+        Set<Book> deserializedBooks = Book.deserializeCSV(selectedFile.toPath());
     }
 }
