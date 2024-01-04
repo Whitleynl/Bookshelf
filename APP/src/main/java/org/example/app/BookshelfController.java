@@ -28,6 +28,7 @@ public class BookshelfController {
     public Button executeButton;
     @FXML
     public File selectedFile;
+    public Label selectedFileNameLabel;
     @FXML
     private ListView<Book> bookListView;
     @FXML
@@ -191,13 +192,11 @@ public class BookshelfController {
     private void handleOpenFileAction() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
-        // Set extension filters, if needed
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("All Files", "*.*"));
-        // Show open file dialog
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
-            // Handle the file (e.g., open it with a desktop application or display its content in the UI)
+            selectedFileNameLabel.setText(file.getName());
             System.out.println("File selected: " + file.getAbsolutePath());
         }
     }

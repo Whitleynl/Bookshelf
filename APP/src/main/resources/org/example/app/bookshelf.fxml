@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import java.lang.*?>
-<?import javafx.collections.*?>
+
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -11,24 +10,22 @@
     </padding>
     <MenuBar>
         <Menu mnemonicParsing="false" text="File">
-            <MenuItem mnemonicParsing="false" text="Select File" onAction="#handleOpenFileAction"/>
-            <MenuItem mnemonicParsing="false" text="Serialize as CSV" onAction="#handleSerializeAction" disable="true"/>
-            <MenuItem mnemonicParsing="false" text="Deserialize CSV" onAction="#handleDeserializeAction" disable="true"/>
-            <SeparatorMenuItem/>
-            <MenuItem mnemonicParsing="false" text="Close"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleOpenFileAction" text="Select File" />
+            <MenuItem disable="true" mnemonicParsing="false" onAction="#handleSerializeAction" text="Serialize as CSV" />
+            <MenuItem disable="true" mnemonicParsing="false" onAction="#handleDeserializeAction" text="Deserialize CSV" />
+            <SeparatorMenuItem />
+            <MenuItem mnemonicParsing="false" text="Close" />
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
-            <MenuItem mnemonicParsing="false" text="Delete"/>
+            <MenuItem mnemonicParsing="false" text="Delete" />
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
-            <MenuItem mnemonicParsing="false" text="About"/>
+            <MenuItem mnemonicParsing="false" text="About" />
         </Menu>
     </MenuBar>
-
     <ToolBar prefHeight="45.0" prefWidth="569.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: white;">
-        <Button onAction="#handleExitButtonAction" style="-fx-padding: 6;" text="EXIT" textAlignment="CENTER" />
+        <Label fx:id="selectedFileNameLabel" text="No file selected" />
     </ToolBar>
-
     <HBox spacing="10">
         <VBox spacing="10" HBox.hgrow="ALWAYS">
             <ComboBox fx:id="sortingComboBox" onAction="#handleSortingAction" prefHeight="28.0" prefWidth="104.0" promptText="Sort Items" style="-fx-font-family: Droid Sans Mono; -fx-padding: 1;" />
