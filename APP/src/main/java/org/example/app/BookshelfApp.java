@@ -23,7 +23,6 @@ public class BookshelfApp extends javafx.application.Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        Set<Book> books = Book.deserializeCSV("randomBooks.csv");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bookshelf.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(true);
@@ -32,7 +31,6 @@ public class BookshelfApp extends javafx.application.Application {
         stage.show();
 
         BookshelfController controller = fxmlLoader.getController();
-        controller.setBooks(books);
         ObservableList<String> sortingOptions = FXCollections.observableArrayList("Title", "Author", "Genre", "Publisher");
         controller.sortingComboBox.setItems(sortingOptions);
     }

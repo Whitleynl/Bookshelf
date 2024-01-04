@@ -160,7 +160,7 @@ public class BookshelfController {
             case "Publisher" -> bookListView.getItems().sort(Comparator.comparing(Book::getPublisher));
             default -> bookListView.getItems().sort(Comparator.comparing(Book::getTitle));
         }
-        updateBookListUI(); //refreshes the bookListView
+        updateBookListUI();
     }
 
     /**
@@ -198,6 +198,9 @@ public class BookshelfController {
         if (file != null) {
             selectedFileNameLabel.setText(file.getName());
             System.out.println("File selected: " + file.getAbsolutePath());
+
+            Set<Book> booksFromFile = Book.deserializeCSV(file.toPath());
+            setBooks(booksFromFile);
         }
     }
 
