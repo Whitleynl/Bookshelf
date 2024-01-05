@@ -30,8 +30,8 @@ public class BookshelfApp extends javafx.application.Application {
         stage.setScene(scene);
         stage.show();
 
-        BookshelfController controller = fxmlLoader.getController();
-        ObservableList<String> sortingOptions = FXCollections.observableArrayList("Title", "Author", "Genre", "Publisher");
-        controller.sortingComboBox.setItems(sortingOptions);
+//        BookshelfController controller = fxmlLoader.getController();
+//        ObservableList<String> sortingOptions = FXCollections.observableArrayList("Title", "Author", "Genre", "Publisher");
+//        controller.sortingComboBox.setItems(sortingOptions);
     }
 }
