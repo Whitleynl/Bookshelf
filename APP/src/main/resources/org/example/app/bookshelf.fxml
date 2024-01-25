@@ -11,6 +11,7 @@
     <MenuBar>
         <Menu mnemonicParsing="false" text="File">
             <MenuItem mnemonicParsing="false" onAction="#handleOpenFileAction" text="Select File" />
+            <MenuItem mnemonicParsing="false" onAction="#handleSaveAsAction" text="Save As" />
             <SeparatorMenuItem />
             <MenuItem mnemonicParsing="false" text="Close" />
         </Menu>
@@ -30,4 +31,5 @@
         </VBox>
         <TextArea fx:id="bookDetailsTextArea" prefHeight="400.0" prefWidth="162.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid;" HBox.hgrow="ALWAYS" />
     </HBox>
+    <Label fx:id="statusLabel" text="Ready" />
 </VBox>

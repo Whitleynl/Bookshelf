@@ -21,6 +21,7 @@ public class BookshelfController {
     @FXML
     public File selectedFile;
     public Label selectedFileNameLabel;
+    public Label statusLabel;
     @FXML
     private ListView<Book> bookListView;
     @FXML
@@ -138,6 +139,7 @@ public class BookshelfController {
     @FXML
     public void handleSerializeAction(ActionEvent actionEvent) throws IOException {
         Book.serializeAsCSV(selectedFile.getAbsolutePath(), books);
+        
     }
 
     @FXML
@@ -146,5 +148,25 @@ public class BookshelfController {
         books.addAll(deserializedBooks);
         setBooks(books);
         updateBookListUI();
+    }
+
+    public void handleSaveAsAction(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save As");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("CSV files", "*.csv")
+        );
+        fileChooser.setInitialFileName("untitled.csv");
+        File file = fileChooser.showSaveDialog(null);
+
+        if (file != null) {
+            try {
+                Book.serializeAsCSV(file.getAbsolutePath(), books);
+                statusLabel.setText("Saved to " + file.getAbsolutePath());
+            } catch (IOException e) {
+                e.printStackTrace();
+                statusLabel.setText("Error saving to " + file.getAbsolutePath());
+            }
+        }
     }
 }
