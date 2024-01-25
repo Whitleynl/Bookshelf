@@ -23,8 +23,6 @@
     </MenuBar>
     <ToolBar prefHeight="45.0" prefWidth="569.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: white;">
         <Label fx:id="selectedFileNameLabel" text="No file selected" />
-        <Button fx:id="serializeButton" text="Serialize As CSV" onAction="#handleSerializeAction"/>
-        <Button fx:id="deserializeButton" text="Deserialize CSV" onAction="#handleDeserializeAction"/>
     </ToolBar>
     <HBox spacing="10">
         <VBox spacing="10" HBox.hgrow="ALWAYS">

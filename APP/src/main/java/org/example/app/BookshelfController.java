@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.*;
 
 public class BookshelfController {
-    public Label welcomeText;
     @FXML
     public TextArea bookDetailsTextArea;
     @FXML
@@ -26,10 +25,6 @@ public class BookshelfController {
     private ListView<Book> bookListView;
     @FXML
     ComboBox<String> sortingComboBox;
-    @FXML
-    private Button serializeButton;
-    @FXML
-    private Button deserializeButton;
     @FXML
     private TextArea filePreviewTextArea;
     private final Set<Book> books = new TreeSet<>();
@@ -130,9 +125,9 @@ public class BookshelfController {
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
             selectedFileNameLabel.setText(file.getName());
-            serializeButton.setDisable(false);
-            deserializeButton.setDisable(false);
             selectedFile = file;
+            Set<Book> books = Book.deserializeCSV(file.toPath());
+            setBooks(books);
         }
     }
 
